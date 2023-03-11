@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --first-color:#865DFF;
+    --btn-color:#eee;
+}
+body{
+background-color: var(--first-color);
+font-family: 'poppins';
+}
+/* START INTRO SCREEN */
+.lets-play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+    transition: opacity 1s ease;
+    z-index: 2;
+}
+.lets-play h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #eee;
+    width: fit-content;
+    margin:20px auto;
+    font-weight: 900;
+    margin-bottom:20px;
+}
+.lets-play button{
+    border: none;
+    outline: none;
+    background-color: var(--btn-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.lets-play button:hover{
+    background-color: #333;
+    color: #eee;
+}
+/* END INTRO SCREEN */
+
+.score{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #eee;
+    width: 100%;
+}
+.title{
+    position: absolute;
+    top: 150px;
+    color: white;
+}
+.match{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    opacity: 0;
+    transition: opacity 1s ease 700ms;
+    overflow: hidden;
+}
+.hands{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.player-hand{
+    transform: rotateY(180deg);
+    filter: drop-shadow(0 0 2px black);
+}
+.computer-hand{
+    filter: drop-shadow(0 0 2px black);
+}
+img{
+    width: 200px;
+}
+.choose{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+}
+.choose button{
+    border: none;
+    outline: none;
+    background-color: var(--btn-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight:bold;
+}
+.choose button:hover{
+    background-color: #333;
+    color: #eee;
+}
+.choose button::first-letter{
+    text-transform: uppercase;
+}
+.p-score,.c-score{
+    font-size: 3rem;
+    font-weight: bold;
+}
+div.fadeout{
+    opacity: 0;
+    display: none;
+}
+div.fadein{
+    opacity: 1;
+    display: flex;
+}
+@media (max-width:767px) {
+    .choose{
+        width: 100%;
+    }
+}
+@media (max-width:575px){
+    .match{
+        gap: 50px;
+        padding: 10px;
+    }
+    .choose{
+        gap: 20px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .choose button{
+        font-size: 2rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    .hands{
+        gap: 20px;
+    }
+    /* .score{
+        gap: 20px;
+        font-size: 1.6rem;
+    } */
+    .lets-play h1 {
+        font-size: 2rem;
+    }
+    img{
+        width: 200px;
+    }
+    .title{
+        top: 170px;
+    }
+}
+@media(max-width:300px){
+    .hands img{
+        width: 150px;
+    }
+}
+@keyframes rocking {
+    0%{transform: translatey(-15px)}
+    15%{transform: translatey(0px)}
+    30%{transform: translatey(15px)}
+    45%{transform: translatey(-15px)}
+    60%{transform: translatey(0px)}
+    75%{transform: translatey(15px)}
+    100%{transform: translatey(0px)}
+}

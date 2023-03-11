@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="lets-play">
+        <h1>Rock Scissor paper</h1>
+        <button id="fire-btn">Let's Play</button>
+      </div>
+      <div class="match">
+        <div class="score">
+          <div>
+            <h4>Player Score</h4>
+            <p class="p-score">0</p>
+          </div>
+          <div>
+            <h4>Comp. Score</h4>
+            <p class="c-score">0</p>
+          </div>
+        </div>
+        <div class="title"></div>
+        <div class="hands">
+          <div class="player-hand">
+            <img src="images/rock.png" alt="" />
+          </div>
+          <div class="computer-hand">
+            <img src="images/rock.png" alt="" />
+          </div>
+        </div>
+        <div class="choose">
+          <button>rock</button>
+          <button>scissors</button>
+          <button>paper</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/game.js"></script>
+  </body>
+</html>
